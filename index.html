@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Красивый Сайт</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      font-size: 18px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>FlashLearn</h1>
+    <nav>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Start your journey into the world of knowledge!</h2>
+    <p> Learn faster, remember better with flashcards!</p>
+  </section>
+
+  <section class="flashcards">
+    <!-- 15 Flashcards -->
+    <script>
+      // Данные о карточках (можно редактировать в этом месте)
+      const cardsData = [
+        { imageUrl: 'https://i.pinimg.com/736x/40/ab/87/40ab877c5e6c67b4e9b65503e78b1777.jpg', text: 'Pencil' },
+        { imageUrl: 'https://i.pinimg.com/736x/8d/fa/ff/8dfaff9103723903180d24601fe8312b.jpg', text: 'Pen' },
+        { imageUrl: 'https://i.pinimg.com/736x/09/b6/8c/09b68cb6edea155574b7386c8d21e76b.jpg', text: 'Eraser' },
+        { imageUrl: 'https://i.pinimg.com/736x/33/d4/51/33d451aaa86e52963be821f77c11e757.jpg', text: 'Ruler' },
+        { imageUrl: 'https://i.pinimg.com/736x/68/4c/2c/684c2ca2949c9bca335b651956299dc3.jpg', text: 'Notebook' },
+        { imageUrl: 'https://i.pinimg.com/736x/1b/29/a7/1b29a789547bf2ac3073193e2b3e6d3e.jpg', text: 'Backpack' },
+        { imageUrl: 'https://i.pinimg.com/736x/2e/8d/02/2e8d0254117b2485b645eddef5627e5c.jpg', text: 'Sharpener' },
+        { imageUrl: 'https://i.pinimg.com/736x/84/fd/95/84fd958f611a44ae1da25fe56eb190f4.jpg', text: 'Scissors' },
+        { imageUrl: 'https://i.pinimg.com/736x/3d/56/35/3d56350d11371037c6d514d598acafb4.jpg', text: 'Glue stick' },
+        { imageUrl: 'https://i.pinimg.com/736x/e7/0a/dd/e70add06b568a5de17131996b21c26ea.jpg', text: 'Highlighter' },
+        { imageUrl: 'https://i.pinimg.com/736x/f8/fd/52/f8fd523859c5bace099aace62555acf8.jpg', text: 'Calculator' },
+        { imageUrl: 'https://png.pngtree.com/png-vector/20240528/ourmid/pngtree-colorful-felt-tip-pens-on-transparent-background-png-image_12529251.png', text: 'Markers' },
+        { imageUrl: 'https://i.pinimg.com/736x/66/97/01/66970181e99092622c1dea92bc94fa74.jpg', text: 'Pencil case' },
+        { imageUrl: 'https://i.pinimg.com/736x/ff/fd/ee/fffdee579b0bdf833d7eb6194dd0b718.jpg', text: 'Correction tape' },
+        { imageUrl: 'https://i.pinimg.com/736x/57/76/af/5776af31767725ca2921b1b1eb6e8323.jpg', text: 'Compass' }
+      ];
+
+      const flashContainer = document.querySelector('.flashcards');
+
+      // Создаем карточки на основе данных
+      cardsData.forEach(cardData => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${cardData.imageUrl}" alt="${cardData.text}">
+          <div class="card-content">${cardData.text}</div>
+        `;
+        flashContainer.appendChild(card);
+      });
+    </script>
+  </section>
+
+  <footer>
+    <p>© 2025 Где флэш-карточки становятся суперсилой</p>
+  </footer>
+
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
